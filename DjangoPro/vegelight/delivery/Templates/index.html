@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegelight | Pure Veg Delivery</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}?v=1778515902" rel="stylesheet">
+    <style>
+        /* Specific Landing Page Styles */
+        body {
+            padding: 0;
+            background: var(--surface);
+        }
+        
+        .hero-section {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(28, 28, 28, 0.6), rgba(28, 28, 28, 0.6)), url("{% static 'img/hero_bg.png' %}") no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            background: none;
+            -webkit-text-fill-color: white;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+            letter-spacing: -2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #f1f1f1;
+            margin-bottom: 3rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(252, 128, 25, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(252, 128, 25, 0.6);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+            border-color: white;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feature-banner {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feature-banner">
+        🌱 100% Pure Vegetarian Certified Delivery 🌱
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Vegelight</h1>
+            <p class="hero-subtitle">Where you find the true, pure vegetarian experience. Fresh, healthy, and delivered instantly to your door.</p>
+            
+            <div class="cta-container">
+                <a href="/opensignup/" class="btn-primary">Sign Up Now</a>
+                <a href="/opensignin/" class="btn-secondary">Log In</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

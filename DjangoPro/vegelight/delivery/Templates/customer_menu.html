@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ restaurant.name }} Menu</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}?v=1778515902" rel="stylesheet">
+</head>
+<body>
+    <div class="page-header">
+        <h2>{{ restaurant.name }}</h2>
+        <a href="{% url 'show_cart' username %}" style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid var(--primary);">🛒 Cart</a>
+    </div>
+
+    <div class="grid-container">
+        {% for item in itemList %}
+            <div class="menu-card">
+                <img src="{{ item.picture }}" alt="{{ item.name }}">
+                <div class="card-content">
+                    {% if item.vegeterian %}
+                        <span class="veg-badge">● VEG</span>
+                    {% else %}
+                        <span class="nonveg-badge">▲ NON-VEG</span>
+                    {% endif %}
+                    
+                    <div class="card-title">{{ item.name }}</div>
+                    <div class="card-subtitle">{{ item.description }}</div>
+                    
+                    <div class="card-footer">
+                        <span class="price-tag">₹{{ item.price }}</span>
+                        <a href="{% url 'add_to_cart' item.id username %}" class="btn-small">ADD +</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
