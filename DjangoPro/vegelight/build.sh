@@ -6,5 +6,6 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
 python manage.py migrate
+python populate.py
 python cleanup_and_populate.py
 python add_more_items.py
