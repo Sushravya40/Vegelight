@@ -1,0 +1,299 @@
+/* Glassmorphism App Container */
+.App {
+  max-width: 800px;
+  width: 90vw;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #ffffff;
+}
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(45deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 2rem 0;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#inp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+#inp input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+#inp input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#inp input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#inp button,
+.clear-btn {
+  border: none;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #ffffff;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+
+#inp button:hover,
+.clear-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#inp button:active,
+.clear-btn:active {
+  transform: translateY(0);
+}
+
+#btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#btns select {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+#btns select option {
+  background: #2a2a35;
+  color: #ffffff;
+}
+
+#btns select:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.task-list li:hover {
+  transform: translateX(5px);
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.task-list li.completed {
+  opacity: 0.6;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.task-list li > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-list li span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.task-list li small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.task-list li > div:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.task-list button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.task-list button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.task-list button:last-child {
+  background: rgba(220, 38, 38, 0.2);
+  color: #ff8a8a;
+}
+
+.task-list button:last-child:hover {
+  background: rgba(220, 38, 38, 0.4);
+  color: #ffffff;
+}
+
+.progress-tracker {
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-tracker p {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  border-radius: 999px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 1.5rem;
+    margin: 1rem;
+    width: auto;
+  }
+  
+  #inp {
+    flex-direction: column;
+  }
+  
+  #inp button {
+    width: 100%;
+  }
+  
+  #btns {
+    flex-direction: column;
+  }
+  
+  .task-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .task-list li > div:last-child {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 12px;
+  }
+}
