@@ -56,3 +56,17 @@ Open your web browser and go to `http://127.0.0.1:8000` to start exploring Vegel
 ## 💳 Razorpay Configuration
 To enable payments locally, you must provide your Razorpay API keys. 
 Update your settings or environment variables with your `RAZORPAY_KEY_ID` and `RAZORPAY_KEY_SECRET` before testing the checkout process.
+
+---
+
+## 📸 Screenshots
+
+*(Add your screenshots here. You can drag and drop images directly into GitHub to upload them!)*
+
+---
+
+## 🔮 Future Enhancements
+
+* **Delivery Tracking:** Real-time map tracking for assigned delivery agents.
+* **Subscription Boxes:** Allow users to subscribe to weekly fresh vegetable boxes.
+* **Email Notifications:** Automated receipts and order updates sent to users.
